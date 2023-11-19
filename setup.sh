@@ -11,4 +11,4 @@ python -m venv "venv/$1"
 source "venv/$1/bin/activate"
 
 # 3. Upgrade pip and install packages
-pip install --upgrade pip  && pip install -r "assets/requirements_$1.txt"
+pip install --upgrade pip  && pip install -r "assets/requirements_django.txt"
