@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "pms"
+		},
+		{
+			"path": "tour-of-heroes"
 		}
 	]
 }

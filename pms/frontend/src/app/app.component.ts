@@ -13,6 +13,6 @@ export class AppComponent {
   title = 'frontend';
 
   showTask() {
-    this.configService.
+    // this.configService.
   }
 }
