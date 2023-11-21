@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "tour-of-heroes/frontend"
+		},
+		{
+			"path": "tour-of-heroes/backend"
+		},
+		{
+			"path": "tour-of-heroes/tests"
+		}
+	]
+}
