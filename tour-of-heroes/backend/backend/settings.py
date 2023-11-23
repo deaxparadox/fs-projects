@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     "corsheaders",
     # 
     "app",
-    "api",
+    # "api",
+    "apiv1",
+    "apiv2",
     "chat"
 ]
 
