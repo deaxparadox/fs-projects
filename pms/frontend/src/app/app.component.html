@@ -1,4 +1,9 @@
-<div id="navbar">
-  <a href="#" class="navitem">PMS</a>
-  <a href="#" class="navitem">About</a>
+<h1>Main page.</h1>
+
+<div *ngIf="headings">
+  <ul>
+    <li *ngFor="let heading of headings">
+      <h1>{{ heading.heading }}</h1>
+    </li>
+  </ul>
 </div>

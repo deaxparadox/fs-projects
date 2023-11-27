@@ -1,6 +1,7 @@
 from rest_framework import serializers
 
 class heading_TaskSerializer_single_task(serializers.Serializer):
+    id = serializers.IntegerField()
     task = serializers.CharField()
     start = serializers.DateField(required=False)
     end = serializers.DateField(required=False)
@@ -8,12 +9,12 @@ class heading_TaskSerializer_single_task(serializers.Serializer):
     updated = serializers.DateTimeField()
 
 class heading_HeadingSerializer_single_task(serializers.Serializer):
-    tasks = heading_TaskSerializer_single_task(many=True)
-
+    id = serializers.IntegerField()
     heading = serializers.CharField()
     start = serializers.DateField(required=False)
     end = serializers.DateField(required=False)
     created = serializers.DateTimeField()
     updated = serializers.DateTimeField()
+    tasks = heading_TaskSerializer_single_task(many=True)
 
 

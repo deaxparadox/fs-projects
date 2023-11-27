@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "pms/frontend"
+		},
+		{
+			"path": "pms/backend"
+		},
+		{
+			"path": "pms/cli-test"
+		}
+	]
+}

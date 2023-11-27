@@ -32,6 +32,3 @@ class Task(models.Model):
     def save(self, *args, **kwargs) -> None:
         return super().save(*args, **kwargs)
     
-# @receiver(pre_save, sender=Task)
-# def my_handler(sender, **kwargs):
-#     print("saving", sender.task, sender.heading)

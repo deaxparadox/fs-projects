@@ -8,6 +8,12 @@
 		},
 		{
 			"path": "tour-of-heroes/tests"
+		},
+		{
+			"path": "rxjs-learn"
 		}
-	]
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "rxjs-learn"
+	}
 }

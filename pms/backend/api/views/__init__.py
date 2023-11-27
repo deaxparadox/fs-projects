@@ -10,9 +10,10 @@ from django.shortcuts import render
 from app.models.headings import Heading
 from app.models.tasks import Task
 from ..serializers import (
-    HeadingModelSerializers, 
-    TaskModelSerializers,
-    HeadingModelSerializers_2
+    HeadingModelSerializer, 
+    TaskModelSerializer,
+    HeadingModelSerializers_2,
+    TaskModel_Serializers_2
 )
 from ..serializers.single_heading import (
     heading_HeadingSerializer_single_task
@@ -24,10 +25,13 @@ from ..serializers.single_task import (
 
 @api_view(["GET"])
 def home_view(request):
+    """
+    Send a response with all heading
+    """
     match request.method:
         case "GET":
             headings = Heading.objects.all()
-            serializers = HeadingModelSerializers_2(headings, many=True)
+            serializers = HeadingModelSerializer(headings, many=True)
             return Response(
                 serializers.data,
                 status=status.HTTP_200_OK
@@ -35,10 +39,13 @@ def home_view(request):
 
 @api_view(["GET"])
 def tasks_view(request):
+    """
+    Get all Tasks
+    """
     match request.method:
         case "GET":
             tasks = Task.objects.all()
-            serializers = TaskModelSerializers(tasks, many=True)
+            serializers = TaskModelSerializer(tasks, many=True)
             print(serializers)
             return Response(
                 serializers.data,
